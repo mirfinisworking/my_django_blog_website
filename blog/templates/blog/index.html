@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% if posts %}
+	<ul>
+	{% for post in posts %}
+		<h1>{{post.title}}</h1>
+		<p>{{post.timestamp}}</p>
+		<p>{{post.body}}</p>
+	{% endfor %}
+	</ul>
+{% else %}	
+	<p>No blogs are available.</p>
+{% endif %}	
+{% endblock %}

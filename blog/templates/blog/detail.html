@@ -1,0 +1,8 @@
+{% if posts %}
+{% for post in posts %}
+<h1>{{post.titel}}</h1>
+<p>{{post.body}}</p>
+{% endfor %}
+{%else%}
+<p>Error_No_Blogs</p>
+{%endif%}
