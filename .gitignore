@@ -1,0 +1,6 @@
+*.py[cdo]
+*.log
+*.sqlite3
+dlist
+migrations
+.DS_Store
