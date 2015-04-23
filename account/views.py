@@ -24,7 +24,7 @@ def register(request):
 			user.password = password
 			user.save()
 			return render_to_response('success.html',{'username':username})
-		else:
+	else:
 			uf = UserForm()
-		return render_to_response('register.html',{'uf':uf})
+	return render_to_response('register.html',{'uf':uf})
 		
