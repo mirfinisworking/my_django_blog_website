@@ -13,6 +13,7 @@
 		p{margin:1em 0}
 	</style>
 <body>
+	{% csrf_token %}
 	<h1>Rigster Page:</h1>
 	<form method='post' enctype="multipart/form-data">
 		{{uf.as_p}}
