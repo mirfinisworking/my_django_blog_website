@@ -19,15 +19,15 @@ def register(request):
 			username = uf.cleaned_data['username']
 			password = uf.cleaned_data['password']
 			#write into datebase.
-			user = models.User()
+			user = models.UserAccount()
 			user.username = username
 			user.password = password
 			user.save()
-			#return render_to_response('success.html',{'username':username})
-			return HttpResponseRedirect(reverse('success.html',{'username':username}))
+			return render(request,'account/success.html',{'username':username})
+			#return HttpResponseRedirect(reverse('success.html',{'username':username}))
 	else:
 			uf = UserForm()
-	return render_to_response('register.html',{'uf':uf})
+	return render(request,'register.html',{'uf':uf})
 
 
 

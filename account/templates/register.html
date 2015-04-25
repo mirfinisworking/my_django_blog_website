@@ -13,9 +13,9 @@
 		p{margin:1em 0}
 	</style>
 <body>
-	{% csrf_token %}
 	<h1>Rigster Page:</h1>
-	<form method='post' enctype="multipart/form-data">
+	<form action="/account/" method='post' enctype="multipart/form-data">
+		{% csrf_token %}
 		{{uf.as_p}}
 		<input type="submit" value="commit"/>
 	</form>
